@@ -68,15 +68,3 @@ def loaders():
     test_dataloader = DataLoader(test_data, batch_size=128, shuffle=True)
 
     return (training_dataloader, validation_dataloader, test_dataloader)
-
-"""(data , _, _) = loaders()
-
-figure = plt.figure(figsize=(8, 8))
-cols, rows = 3, 3
-images, label = next(iter(data))
-for i in range(1, cols * rows + 1):
-    figure.add_subplot(rows, cols, i)
-    plt.title(label)
-    plt.axis("off")
-    plt.imshow(images[i].permute(1,2,0), cmap="gray")
-plt.show()"""
